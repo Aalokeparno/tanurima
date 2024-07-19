@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanurima Dhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">MACROCOSMIC MINISCULE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gallery
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                            <li><a class="dropdown-item" href="abstract.html">Abstract</a></li>
+                            <li><a class="dropdown-item" href="landscape.html">Landscape</a></li>
+                            <li><a class="dropdown-item" href="portrait.html">Portrait</a></li>
+                        </ul>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Artworks Section -->
+    <h2 class="section-title">Abstract</h2>
+    <div class="container">
+        <div class="grid" id="artwork-grid">
+          <!-- Artwork images will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="artworkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="artworkTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <img id="artworkImage" class="img-fluid" alt="">
+            <p id="artworkDetails"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const artworks = [
+        {
+        title: 'Abstract Art 1',
+        img: 'images/Abstract/_DSC6552-01.jpg',
+        details: 'Dimensions: 24x36 inches, Price: $200, Medium: Acrylic'
+        },
+        {
+        title: 'Abstract Art 2',
+        img: 'images/Abstract/_DSC6562-02.jpg',
+        details: 'Dimensions: 18x24 inches, Price: $150, Medium: Watercolor'
+        },
+        {
+        title: 'Abstract Art 2',
+        img: 'images/Abstract/A.jpg',
+        details: 'Dimensions: 18x24 inches, Price: $150, Medium: Watercolor'
+        },
+        {
+        title: 'Celebration Of Life 1',
+        img: 'images/Abstract/Celebration Of Life 1, Year_ 2022, Size_ 60_X40_, Medium_ Ink On Paper.jpg',
+        details: 'Dimensions: 60_X40 inches/ cm ??, Price: $150, Medium: Ink On Paper'
+        },
+        {
+        title: 'Celebration Of Life 2',
+        img: 'images/Abstract/Celebration Of Life 2,Year_2022 Size_  60_X40_, Medium_ Ink On Paper.jpg',
+        details: 'Dimensions: 18x24 inches, Price: $150, Medium: Watercolor'
+        },
+        {
+        title: 'Celebration Of Life 3',
+        img: 'images/Abstract/Celebration Of Life 3, Year_ 2022, Size_ 20_X30_, Medium_ Ink On Paper.jpg',
+        details: 'Dimensions: 18x24 inches, Price: $150, Medium: Watercolor'
+        },
+        {
+        title: 'Celebration Of Life 4',
+        img: 'images/Abstract/Celebration Of Life 4,Year_2022, Size_ 20_X30_, Medium_ Ink On Paper.jpg',
+        details: 'Dimensions: 18x24 inches, Price: $150, Medium: Watercolor'
+        },
+        {
+        title: 'My Childhood 3',
+        img: 'images/Abstract/My Childhood 3 , 24 x 30 inches, Ink On Canvas, 2022.jpg',
+        details: 'Dimensions: 18x24 inches, Price: $150, Medium: Watercolor'
+        },
+        {
+        title: 'Untitled-5',
+        img: 'images/Abstract/Untitled-5, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-8',
+        img: 'images/Abstract/Untitled-8, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-9',
+        img: 'images/Abstract/Untitled-9, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-12',
+        img: 'images/Abstract/Untitled-12, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-18',
+        img: 'images/Abstract/Untitled-18, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-27',
+        img: 'images/Abstract/Untitled-27, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-34',
+        img: 'images/Abstract/Untitled-34, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-42',
+        img: 'images/Abstract/Untitled-42, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled-47',
+        img: 'images/Abstract/Untitled-47, 7 x 11 inches, Pen and Ink on Paper, 2023.jpg',
+        details: 'Dimensions: 7 x 11 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Untitled',
+        img: 'images/Abstract/Santiniketan.png',
+        details: 'Dimensions: , Price on request, Medium: Pen and Ink on Paper'
+        },
+        // Add more artwork objects here
+    ];
+
+    const artworkGrid = document.getElementById('artwork-grid');
+
+    artworks.forEach((artwork, index) => {
+        const artworkItem = document.createElement('div');
+        artworkItem.classList.add('artwork-item');
+        artworkItem.innerHTML = `
+        <img src="${artwork.img}" alt="${artwork.title}" data-toggle="modal" data-target="#artworkModal" data-index="${index}">
+        `;
+        artworkGrid.appendChild(artworkItem);
+    });
+
+    $('#artworkModal').on('show.bs.modal', function(event) {
+        const button = $(event.relatedTarget);
+        const index = button.data('index');
+        const artwork = artworks[index];
+
+        const modal = $(this);
+        modal.find('.modal-title').text(artwork.title);
+        modal.find('#artworkImage').attr('src', artwork.img);
+        modal.find('#artworkDetails').text(artwork.details);
+    });
+    });
+    </script>
+
+
+</body>
+</html>

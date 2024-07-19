@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanurima Dhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">MACROCOSMIC MINISCULE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gallery
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                            <li><a class="dropdown-item" href="abstract.html">Abstract</a></li>
+                            <li><a class="dropdown-item" href="landscape.html">Landscape</a></li>
+                            <li><a class="dropdown-item" href="portrait.html">Portrait</a></li>
+                        </ul>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Artworks Section -->
+    <h2 class="section-title">Portrait</h2>
+    <div class="container">
+        <div class="grid" id="artwork-grid">
+          <!-- Artwork images will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="artworkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="artworkTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <img id="artworkImage" class="img-fluid" alt="">
+            <p id="artworkDetails"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const artworks = [
+    {
+        title: 'Durga',
+        img: 'images/Portrait/Durga, Year_ 2020, Size____, Medium_ Mixed Media On Canvas.jpg',
+        details: 'Dimensions: , Price on request, Medium: Mixed Media On Canvas'
+        },
+        {
+        title: 'Face 1',
+        img: 'images/Portrait/Face 1, Year_ 2021,Size_6_X8_,Medium_ Charcoal  On Board.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        },
+        {
+        title: 'Face 2',
+        img: 'images/Portrait/Face 2, Year_ 2021, Size_ 6_X8_,Medium_Charcoal On Board_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        },
+        {
+        title: 'Face 3',
+        img: 'images/Portrait/Face 3, Year_2021, Size_6_X8_,Medium_ Charcoal On Board_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        },
+        {
+        title: 'Face 4',
+        img: 'images/Portrait/Face 4,Year_ 2021, Size_6_X8_,Medium_Charcoal On Board_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        },
+        {
+        title: 'Face 5',
+        img: 'images/Portrait/Face 5, Year_ 2021, Size_6_X8_,Medium_Charcoal On Board_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Board'
+        },
+        {
+        title: 'Face 6',
+        img: 'images/Portrait/Face 6, Year_ 2021, Size_6_X8_,Medium_ Charcoal On Board_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Board'
+        },
+        {
+        title: 'Face 11',
+        img: 'images/Portrait/Face 11, Year 2021, Size_ 11_×13_ Medium_ Pen and Ink on Paper_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Pen and Ink on Paper'
+        },
+        {
+        title: 'Indira Gandhi',
+        img: 'images/Portrait/Indira Gandhi,Year_ 2018, Size___, Medium_  Ink On Paper_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Ink On Paper'
+        },
+        {
+        title: 'Mahadev',
+        img: 'images/Portrait/Mahadev, Year_ 2017, Size_ 24_X18_, Medium_ Mixed  Media On Canvas_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        },
+        {
+        title: 'Mother',
+        img: 'images/Portrait/Mother, Year_ 2017, Size_ 24_X18_, Medium_ Mixed Media On Canvas_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        },
+        {
+        title: 'Rituparno',
+        img: 'images/Portrait/Rituparno, Year_2020, Size_10.5_X13_,Medium_ Charcoal On Paper_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Paper'
+        },
+        {
+        title: 'The Old Man',
+        img: 'images/Portrait/The Old Man, Year_ 2020, Size_9_X10.5_, Medium_Charcoal On Paper.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Paper'
+        },
+        {
+        title: 'The Old Man',
+        img: 'images/Portrait/The Old Man, Year_2018, Size_ 7_×9_ Medium_ Charcoal On Paper_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Paper'
+        },
+        {
+        title: 'Untitled',
+        img: 'images/Portrait/Untitled, Year_2018, Size_ 12_×16_ Medium_ Mixed Media On Canvas_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        },
+        {
+        title: 'Untitled',
+        img: 'images/Portrait/Untitled, Year_2018, Size_ 24_X18_, Medium_ Mixed Media On Paper_.jpg',
+        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        },
+        // Add more artwork objects here
+    ];
+
+    const artworkGrid = document.getElementById('artwork-grid');
+
+    artworks.forEach((artwork, index) => {
+        const artworkItem = document.createElement('div');
+        artworkItem.classList.add('artwork-item');
+        artworkItem.innerHTML = `
+        <img src="${artwork.img}" alt="${artwork.title}" data-toggle="modal" data-target="#artworkModal" data-index="${index}">
+        `;
+        artworkGrid.appendChild(artworkItem);
+    });
+
+    $('#artworkModal').on('show.bs.modal', function(event) {
+        const button = $(event.relatedTarget);
+        const index = button.data('index');
+        const artwork = artworks[index];
+
+        const modal = $(this);
+        modal.find('.modal-title').text(artwork.title);
+        modal.find('#artworkImage').attr('src', artwork.img);
+        modal.find('#artworkDetails').text(artwork.details);
+    });
+    });
+    </script>
+
+
+</body>
+</html>

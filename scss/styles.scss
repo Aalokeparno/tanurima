@@ -1,0 +1,232 @@
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+//"../images/Abstract/Celebration Of Life 4,Year_2022, Size_ 20_X30_, Medium_ Ink On Paper,.jpg"
+// Custom Styles
+body {
+    font-family: "Lucida Handwriting", sans-serif;
+    background-color: #e9ecef;
+}
+
+
+header {
+    font-size: 1.2em; /* Increase font size */
+    margin-bottom: 40px;
+    //background-color: rgba(255, 255, 255, 1); /* Slightly transparent background for the navbar */
+    background-color: #e9ecef;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu {
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    //color: #fff; /* Adjust the color to fit your design */
+    text-shadow: .5px .5px 1px rgba(0, 0, 0, 0.5); /* Optional: Add some shadow for better readability */
+}
+
+#homepage_carousel {
+
+    #carouselExampleIndicators {
+        max-width: 900px; /* Set the maximum width of the carousel */
+        margin: 0 auto; /* Center the carousel */
+        margin-bottom: 40px;
+        background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
+        border-radius: 20px;
+    }
+
+    .carousel-inner img {
+        height: 500px; /* Set the height of the images */
+        object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+        width: 100%; /* Make sure images fill the width of the container */
+        border-radius: 20px;
+    }
+
+    .carousel-item {
+        transition: transform 0.5s ease-in-out;
+    }
+
+}
+
+#options {
+
+    .row.no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .col-md-4 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .option-box {
+        position: relative;
+        overflow: hidden;
+        height: 300px; /* Set a uniform height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0; /* Remove margin to eliminate gaps */
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05); /* Enlarge the box on hover */
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+            display: block;
+        }
+
+        .option-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 0;
+        }
+    }
+}
+
+
+
+#about {
+
+    img{
+        object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+        border-radius: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+        //
+        //line-height: 1.6;
+        background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the about section */
+        padding: 40px 20px;
+        margin: 0 auto;
+        max-width: 1000px;
+        border-radius: 10px;
+    p{
+        font-family: 'Apple Chancery', cursive;
+        font-size: 1em;
+    }
+
+}
+
+#artwork-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+    //display: grid;
+    //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    //gap: 10px;
+  
+    .artwork-item {
+      //flex: 1 1 calc(33% - 15px);
+      //max-width: calc(33% - 15px);
+      object-fit: cover;
+      height: 250px;
+      width: 350px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: transform 0.2s;
+        object-fit: cover;
+        border-radius: 20px;
+  
+        &:hover {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+
+  #events{
+    .event-box {
+        font-family: 'Apple Chancery', cursive;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        height: 270px;
+        //display: flex;
+        //flex-direction: column;
+        .event-info {
+            padding: 5% 10%;
+
+            h3 {
+                font-size: 22px;
+                color: #333;
+            }
+
+            p {
+                font-size: 16px;
+                color: #666;
+            }
+        }
+        .event-images {
+
+            img {
+                height: 230px;
+            }
+        }
+    }
+    .group-exhibitions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .group-exhibition-item{
+            //flex: 1 1 calc(33% - 15px);
+            //max-width: calc(33% - 15px);
+            height: 330px;
+            width: 350px;
+            object-fit: cover;
+            background-color: white;
+            border-radius: 20px;
+            font-family: 'Apple Chancery', cursive;
+
+            img {
+                width: 100%;
+                height: 70%;
+                transition: transform 0.2s;
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+              }
+            .description{
+                h3 {
+                    font-size: 18px;
+                    color: #333;
+                }
+    
+                p {
+                    font-size: 15px;
+                    color: #666;
+                }
+            }
+        }
+    }
+  }
+
+
+
+
+
+

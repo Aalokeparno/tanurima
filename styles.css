@@ -1,0 +1,178 @@
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+body {
+  font-family: "Lucida Handwriting", sans-serif;
+  background-color: #e9ecef;
+}
+
+header {
+  font-size: 1.2em; /* Increase font size */
+  margin-bottom: 40px;
+  background-color: #e9ecef;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5); /* Optional: Add some shadow for better readability */
+}
+
+#homepage_carousel #carouselExampleIndicators {
+  max-width: 900px; /* Set the maximum width of the carousel */
+  margin: 0 auto; /* Center the carousel */
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
+  border-radius: 20px;
+}
+#homepage_carousel .carousel-inner img {
+  height: 500px; /* Set the height of the images */
+  object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+  width: 100%; /* Make sure images fill the width of the container */
+  border-radius: 20px;
+}
+#homepage_carousel .carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
+
+#options .row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+#options .col-md-4 {
+  padding-right: 0;
+  padding-left: 0;
+}
+#options .option-box {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Set a uniform height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0; /* Remove margin to eliminate gaps */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+#options .option-box:hover {
+  transform: scale(1.05); /* Enlarge the box on hover */
+}
+#options .option-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+  display: block;
+}
+#options .option-box .option-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+#about {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the about section */
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+#about img {
+  object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#about p {
+  font-family: "Apple Chancery", cursive;
+  font-size: 1em;
+}
+
+#artwork-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+#artwork-grid .artwork-item {
+  object-fit: cover;
+  height: 250px;
+  width: 350px;
+}
+#artwork-grid .artwork-item img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  object-fit: cover;
+  border-radius: 20px;
+}
+#artwork-grid .artwork-item img:hover {
+  transform: scale(1.08);
+}
+
+#events .event-box {
+  font-family: "Apple Chancery", cursive;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 270px;
+}
+#events .event-box .event-info {
+  padding: 5% 10%;
+}
+#events .event-box .event-info h3 {
+  font-size: 22px;
+  color: #333;
+}
+#events .event-box .event-info p {
+  font-size: 16px;
+  color: #666;
+}
+#events .event-box .event-images img {
+  height: 230px;
+}
+#events .group-exhibitions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+#events .group-exhibitions .group-exhibition-item {
+  height: 330px;
+  width: 350px;
+  object-fit: cover;
+  background-color: white;
+  border-radius: 20px;
+  font-family: "Apple Chancery", cursive;
+}
+#events .group-exhibitions .group-exhibition-item img {
+  width: 100%;
+  height: 70%;
+  transition: transform 0.2s;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+#events .group-exhibitions .group-exhibition-item .description h3 {
+  font-size: 18px;
+  color: #333;
+}
+#events .group-exhibitions .group-exhibition-item .description p {
+  font-size: 15px;
+  color: #666;
+}
+
+/*# sourceMappingURL=styles.css.map */
