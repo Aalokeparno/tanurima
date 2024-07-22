@@ -146,12 +146,12 @@ header {
 #events .event-box .event-images img {
   height: 230px;
 }
-#events .group-exhibitions {
+#events .box-exhibitions {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
-#events .group-exhibitions .group-exhibition-item {
+#events .box-exhibitions .group-exhibition-item {
   height: 330px;
   width: 350px;
   object-fit: cover;
@@ -159,18 +159,18 @@ header {
   border-radius: 20px;
   font-family: "Apple Chancery", cursive;
 }
-#events .group-exhibitions .group-exhibition-item img {
+#events .box-exhibitions .group-exhibition-item img {
   width: 100%;
   height: 70%;
   transition: transform 0.2s;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-#events .group-exhibitions .group-exhibition-item .description h3 {
+#events .box-exhibitions .group-exhibition-item .description h3 {
   font-size: 18px;
   color: #333;
 }
-#events .group-exhibitions .group-exhibition-item .description p {
+#events .box-exhibitions .group-exhibition-item .description p {
   font-size: 15px;
   color: #666;
 }

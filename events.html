@@ -58,7 +58,6 @@
                 </div>
             </div>
 
-            <br><h2 class="section-title">Workshops</h2>
             <br><h2 class="section-title">Solo Exhibitions</h2>
 
             <div class="event-box container">
@@ -69,7 +68,7 @@
                         <p>From 30<sup>th</sup> May to 2<sup>nd</sup> June</p>
                     </div>
                     <div class="event-images col-md-6">
-                        <img src="images/Solo/SE4.jpg" alt="Macrocosmic Miniscule">
+                        <img src="images/Solo/SE5.jpg" alt="Macrocosmic Miniscule">
                     </div>
                 </div>
             </div>
@@ -126,8 +125,11 @@
                 </div>
             </div>
 
+            <br><h2 class="section-title">Workshops</h2>
+            <div class="box-exhibitions container mt-5" id="workshops"></div>
+
             <br><h2 class="section-title">Group Exhibitions</h2>
-            <div class="group-exhibitions container mt-5"></div>
+            <div class="box-exhibitions container mt-5" id="group-ex"></div>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -136,6 +138,48 @@
         // script.js
         document.addEventListener('DOMContentLoaded', () => {
             const groupExhibitions = [
+                {
+                    image: 'images/Workshops/WS2023_Soumen_Charukala_Utsab_Bally.jpg',
+                    description: '<h3>2023<br>Soumen Charukal Utsab</h3> <p><br> Balley</p>'
+                },
+                {
+                    image: 'images/Workshops/WS2022_Soumen_Charukala_Utsab_Bally.jpg',
+                    description: '<h3>2022<br>Soumen Charukal Utsab</h3> <p><br> Balley</p>'
+                },
+                {
+                    image: 'images/Workshops/WS2020_Soumen_Charukala_Utsab_Bally.jpg',
+                    description: '<h3>2020<br>Soumen Charukal Utsab</h3> <p><br> Balley</p>'
+                },
+                {
+                    image: 'images/Workshops/WS2018_Soumen_Charukala_Utsab_Bally.jpg',
+                    description: '<h3>2018<br>Soumen Charukal Utsab</h3> <p><br> Balley</p>'
+                },
+            ];
+
+            const groupExhibitionContainer = document.querySelector('#workshops');
+
+            groupExhibitions.forEach(exhibition => {
+                const exhibitionItem = document.createElement('div');
+                exhibitionItem.classList.add('group-exhibition-item');
+
+                exhibitionItem.innerHTML = `
+                    <img src="${exhibition.image}" alt="${exhibition.description}">
+                    <div class="description">${exhibition.description}</div>
+                `;
+
+                groupExhibitionContainer.appendChild(exhibitionItem);
+            });
+        });
+
+    </script>
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const groupExhibitions = [
+                {
+                    image: 'images/Group/GE24.jpg',
+                    description: '<h3>2024<br>Hridayanandanobone <br> Sora Exhibition</h3> <p>Gaganendra Shilpo Pradarshashala</p>'
+                },
                 {
                     image: 'images/Group/GE23.jpg',
                     description: '<h3>2023<br>West Bengal State Akademy <br>(Rabindra Bharati Annual Exhibition)</h3> <p>ICCR Kolkata</p>'
@@ -234,7 +278,7 @@
                 },
             ];
 
-            const groupExhibitionContainer = document.querySelector('.group-exhibitions');
+            const groupExhibitionContainer = document.querySelector('#group-ex');
 
             groupExhibitions.forEach(exhibition => {
                 const exhibitionItem = document.createElement('div');
