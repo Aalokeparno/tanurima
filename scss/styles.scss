@@ -155,9 +155,9 @@ header {
         }
       }
     }
-  }
+}
 
-  #events{
+#events{
     .event-box {
         font-family: 'Apple Chancery', cursive;
         background-color: #fff;
@@ -223,8 +223,77 @@ header {
             }
         }
     }
-  }
+}
 
+#press_carousel {
+
+    #pressControls {
+        width: 700px; /* Set the maximum width of the carousel */
+        margin: 0 auto; /* Center the carousel */
+        margin-bottom: 40px;
+        background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
+        border-radius: 20px;
+        font-family: 'Apple Chancery', cursive;
+
+        .carousel-item {
+            transition: transform 0.5s ease-in-out;
+            height: 550px;
+            text-align: center;
+        
+            img {
+                height: 450px; /* Set the height of the images */
+                object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+                margin: 5px auto 10px auto;
+            }
+            h3 {
+                font-size: 18px;
+                color: #333;
+            }
+
+            p {
+                font-size: 16px;
+                color: #666;
+            }
+        }
+    }
+}
+
+#comment_carousel {
+
+    #contentControls {
+        width: 1200px; /* Set the maximum width of the carousel */
+        margin: 0 auto; /* Center the carousel */
+        margin-bottom: 40px;
+        background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
+        border-radius: 20px;
+        font-family: 'Apple Chancery', cursive;
+
+        .carousel-item {
+            transition: transform 0.5s ease-in-out;
+            height: 320px;
+            text-align: center;
+
+            #content {
+                margin: 30px 70px;
+                font-size: 18px;
+                color: #333;
+            }
+
+            #name {
+                margin: auto;
+                text-align: bottom;
+                font-size: 18px;
+                color: #666;
+            }
+        }
+        .carousel-control-prev{
+            left: -5%;
+        }
+        .carousel-control-next{
+            left: 90%;
+        }
+    }
+}
 
 
 

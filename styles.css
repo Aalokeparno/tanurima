@@ -175,4 +175,62 @@ header {
   color: #666;
 }
 
+#press_carousel #pressControls {
+  width: 700px; /* Set the maximum width of the carousel */
+  margin: 0 auto; /* Center the carousel */
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
+  border-radius: 20px;
+  font-family: "Apple Chancery", cursive;
+}
+#press_carousel #pressControls .carousel-item {
+  transition: transform 0.5s ease-in-out;
+  height: 550px;
+  text-align: center;
+}
+#press_carousel #pressControls .carousel-item img {
+  height: 450px; /* Set the height of the images */
+  object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+  margin: 5px auto 10px auto;
+}
+#press_carousel #pressControls .carousel-item h3 {
+  font-size: 18px;
+  color: #333;
+}
+#press_carousel #pressControls .carousel-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+#comment_carousel #contentControls {
+  width: 1200px; /* Set the maximum width of the carousel */
+  margin: 0 auto; /* Center the carousel */
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
+  border-radius: 20px;
+  font-family: "Apple Chancery", cursive;
+}
+#comment_carousel #contentControls .carousel-item {
+  transition: transform 0.5s ease-in-out;
+  height: 320px;
+  text-align: center;
+}
+#comment_carousel #contentControls .carousel-item #content {
+  margin: 30px 70px;
+  font-size: 18px;
+  color: #333;
+}
+#comment_carousel #contentControls .carousel-item #name {
+  margin: auto;
+  text-align: bottom;
+  font-size: 18px;
+  color: #666;
+}
+#comment_carousel #contentControls .carousel-control-prev {
+  left: -5%;
+}
+#comment_carousel #contentControls .carousel-control-next {
+  left: 90%;
+}
+
 /*# sourceMappingURL=styles.css.map */
