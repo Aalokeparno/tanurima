@@ -6,7 +6,6 @@ body {
     background-color: #e9ecef;
 }
 
-
 header {
     font-size: 1.2em; /* Increase font size */
     margin-bottom: 40px;
@@ -99,8 +98,6 @@ header {
     }
 }
 
-
-
 #about {
 
     img{
@@ -163,11 +160,13 @@ header {
         background-color: #fff;
         border-radius: 20px;
         padding: 20px;
-        margin-bottom: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         height: 270px;
+        width: 1200px;
+        margin: 10px auto;
         //display: flex;
         //flex-direction: column;
+        
         .event-info {
             padding: 5% 10%;
 
@@ -182,12 +181,29 @@ header {
             }
         }
         .event-images {
-
             img {
                 height: 230px;
             }
         }
+        @media only screen and (max-width: 1200px) {
+            display: flex;
+            width: 100%;
+            //border-radius: 0;
+            @media only screen and (max-width: 992px){
+                .event-info {
+                    padding: 5% 0;
+                }
+            }
+        }
+        @media only screen and (max-width: 890px) {
+            height: 500px;
+            width: 580px;
+            .event-info {
+                padding: 5% 5%;
+            }
+        }
     }
+
     .box-exhibitions {
         display: flex;
         flex-wrap: wrap;
