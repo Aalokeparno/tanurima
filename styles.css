@@ -123,6 +123,15 @@ header {
   transform: scale(1.08);
 }
 
+#artworkModal p {
+  margin: 0;
+  font-family: "Apple Chancery", cursive;
+  color: #333;
+}
+#artworkModal p .description {
+  color: #666;
+}
+
 #events .event-box {
   font-family: "Apple Chancery", cursive;
   background-color: #fff;
@@ -252,6 +261,14 @@ header {
 }
 #comment_carousel #contentControls .carousel-control-next {
   left: 90%;
+}
+
+#artist img {
+  border-radius: 20px;
+}
+
+#contact {
+  font-family: "Apple Chancery", cursive;
 }
 
 /*# sourceMappingURL=styles.css.map */

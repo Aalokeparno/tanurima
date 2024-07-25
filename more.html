@@ -43,6 +43,13 @@
 
     <main>
 
+        <section id="artist" class="py-5">
+            <h2 class="section-title">Tanurima Dhar</h2>
+            <div class="container">
+                <img src="images/More.jpg" alt="Artist Picture" class="img">
+            </div>
+        </section>
+
         <h2 class="section-title">Testimonials</h2>
 
         <section id="press_carousel">
@@ -137,6 +144,44 @@
                 </button>
             </div>
         </section>
+
+        <h2 class="section-title">Contact</h2>
+        <section id="contact">
+            <br>
+            <form class="container" id="message-form">
+                    
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" required>
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" required>
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone">
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="inputMessage" class="form-label">Message</label>
+                            <textarea class="form-control" required rows="4" name="Message" id="inputMessage" ></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="workOffer">
+                                <label class="form-check-label" for="workOffer"> Regarding Exhibition/ Workshop</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="buyOffer">
+                                <label class="form-check-label" for="buyOffer"> Regarding buying artworks</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark col-sm-auto">Submit</button>
+                    </div>
+                    <br>
+                
+              </form>
+        </section>
         
 
     </main>
@@ -144,5 +189,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "y2ZhY3fjD4pFpuH4B",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('message-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

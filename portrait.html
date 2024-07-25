@@ -77,82 +77,114 @@
     {
         title: 'Durga',
         img: 'images/Portrait/Durga, Year_ 2020, Size____, Medium_ Mixed Media On Canvas.jpg',
-        details: 'Dimensions: , Price on request, Medium: Mixed Media On Canvas'
+        dimension: '',
+        price: 'On Request',
+        medium: 'Mixed Media on Canvas'
         },
         {
         title: 'Face 1',
         img: 'images/Portrait/Face 1, Year_ 2021,Size_6_X8_,Medium_ Charcoal  On Board.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        dimension: '6x8 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Board'
         },
         {
         title: 'Face 2',
         img: 'images/Portrait/Face 2, Year_ 2021, Size_ 6_X8_,Medium_Charcoal On Board_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        dimension: '6x8 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Board'
         },
         {
         title: 'Face 3',
         img: 'images/Portrait/Face 3, Year_2021, Size_6_X8_,Medium_ Charcoal On Board_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        dimension: '6x8 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Board'
         },
         {
         title: 'Face 4',
         img: 'images/Portrait/Face 4,Year_ 2021, Size_6_X8_,Medium_Charcoal On Board_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal  On Board'
+        dimension: '6x8 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Board'
         },
         {
         title: 'Face 5',
         img: 'images/Portrait/Face 5, Year_ 2021, Size_6_X8_,Medium_Charcoal On Board_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Board'
+        dimension: '6x8 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Board'
         },
         {
         title: 'Face 6',
         img: 'images/Portrait/Face 6, Year_ 2021, Size_6_X8_,Medium_ Charcoal On Board_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Board'
+        dimension: '6x8 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Board'
         },
         {
         title: 'Face 11',
         img: 'images/Portrait/Face 11, Year 2021, Size_ 11_×13_ Medium_ Pen and Ink on Paper_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Pen and Ink on Paper'
+        dimension: '11x13 inches',
+        price: 'On Request',
+        medium: 'Pen and Ink on Paper'
         },
         {
         title: 'Indira Gandhi',
         img: 'images/Portrait/Indira Gandhi,Year_ 2018, Size___, Medium_  Ink On Paper_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Ink On Paper'
+        dimension: '',
+        price: 'On Request',
+        medium: 'Pen and Ink on Paper'
         },
         {
         title: 'Mahadev',
         img: 'images/Portrait/Mahadev, Year_ 2017, Size_ 24_X18_, Medium_ Mixed  Media On Canvas_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        dimension: '24x18 inches',
+        price: 'On Request',
+        medium: 'Mixed Media On Canvas'
         },
         {
         title: 'Mother',
         img: 'images/Portrait/Mother, Year_ 2017, Size_ 24_X18_, Medium_ Mixed Media On Canvas_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        dimension: '24x18 inches',
+        price: 'On Request',
+        medium: 'Mixed Media On Canvas'
         },
         {
         title: 'Rituparno',
         img: 'images/Portrait/Rituparno, Year_2020, Size_10.5_X13_,Medium_ Charcoal On Paper_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Paper'
+        dimension: '10.5x13 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Paper'
         },
         {
         title: 'The Old Man',
         img: 'images/Portrait/The Old Man, Year_ 2020, Size_9_X10.5_, Medium_Charcoal On Paper.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Paper'
+        dimension: '9x10.5 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Paper'
         },
         {
         title: 'The Old Man',
         img: 'images/Portrait/The Old Man, Year_2018, Size_ 7_×9_ Medium_ Charcoal On Paper_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Charcoal On Paper'
+        dimension: '7x9 inches',
+        price: 'On Request',
+        medium: 'Charcoal On Paper'
         },
         {
         title: 'Untitled',
         img: 'images/Portrait/Untitled, Year_2018, Size_ 12_×16_ Medium_ Mixed Media On Canvas_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        dimension: '12x16 inches',
+        price: 'On Request',
+        medium: 'Mixed Media On Canvas'
         },
         {
         title: 'Untitled',
         img: 'images/Portrait/Untitled, Year_2018, Size_ 24_X18_, Medium_ Mixed Media On Paper_.jpg',
-        details: 'Dimensions: 6X8 inches, Price on request, Medium: Mixed Media On Canvas'
+        dimension: '24x18 inches',
+        price: 'On Request',
+        medium: 'Mixed Media On Canvas'
         },
         // Add more artwork objects here
     ];
@@ -176,7 +208,11 @@
         const modal = $(this);
         modal.find('.modal-title').text(artwork.title);
         modal.find('#artworkImage').attr('src', artwork.img);
-        modal.find('#artworkDetails').text(artwork.details);
+        modal.find('#artworkDetails').html(`
+        <p>Dimension: <span class="description">${artwork.dimension}</span>, 
+        Price: <span class="description">${artwork.price}</span>, 
+        Medium: <span class="description">${artwork.medium}</span></p>
+    `);
     });
     });
     </script>

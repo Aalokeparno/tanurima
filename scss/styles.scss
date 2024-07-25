@@ -1,6 +1,9 @@
 @import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
 //"../images/Abstract/Celebration Of Life 4,Year_2022, Size_ 20_X30_, Medium_ Ink On Paper,.jpg"
 // Custom Styles
+
+$secondary-font: 'Apple Chancery', cursive;
+
 body {
     font-family: "Lucida Handwriting", sans-serif;
     background-color: #e9ecef;
@@ -117,7 +120,7 @@ header {
         max-width: 1000px;
         border-radius: 10px;
     p{
-        font-family: 'Apple Chancery', cursive;
+        font-family: $secondary-font;
         font-size: 1em;
     }
 
@@ -154,9 +157,20 @@ header {
     }
 }
 
+#artworkModal {
+    p {
+       margin: 0; 
+       font-family: $secondary-font;
+       color: #333;
+       .description {
+        color: #666;
+       }
+    }
+}
+
 #events{
     .event-box {
-        font-family: 'Apple Chancery', cursive;
+        font-family: $secondary-font;
         background-color: #fff;
         border-radius: 20px;
         padding: 20px;
@@ -217,7 +231,7 @@ header {
             object-fit: cover;
             background-color: white;
             border-radius: 20px;
-            font-family: 'Apple Chancery', cursive;
+            font-family: $secondary-font;
 
             img {
                 width: 100%;
@@ -249,7 +263,7 @@ header {
         margin-bottom: 40px;
         background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
         border-radius: 20px;
-        font-family: 'Apple Chancery', cursive;
+        font-family: $secondary-font;
 
         .carousel-item {
             transition: transform 0.5s ease-in-out;
@@ -282,7 +296,7 @@ header {
         margin-bottom: 40px;
         background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
         border-radius: 20px;
-        font-family: 'Apple Chancery', cursive;
+        font-family: $secondary-font;
 
         .carousel-item {
             transition: transform 0.5s ease-in-out;
@@ -311,7 +325,16 @@ header {
     }
 }
 
+#artist {
+    img{
+        border-radius: 20px;
+        }
+}
 
+#contact {
+
+    font-family: $secondary-font;
+}
 
 
 
