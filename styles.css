@@ -1,6 +1,6 @@
 @import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
 body {
-  font-family: "Lucida Handwriting", sans-serif;
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
   background-color: #e9ecef;
 }
 
@@ -96,7 +96,7 @@ header {
   width: 50%;
 }
 #about p {
-  font-family: "Apple Chancery", cursive;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
   font-size: 1em;
 }
 
@@ -125,7 +125,7 @@ header {
 
 #artworkModal p {
   margin: 0;
-  font-family: "Apple Chancery", cursive;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
   color: #333;
 }
 #artworkModal p .description {
@@ -133,7 +133,7 @@ header {
 }
 
 #events .event-box {
-  font-family: "Apple Chancery", cursive;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
@@ -154,7 +154,7 @@ header {
   color: #666;
 }
 #events .event-box .event-images img {
-  height: 230px;
+  max-height: 230px;
 }
 @media only screen and (max-width: 1200px) {
   #events .event-box {
@@ -169,11 +169,15 @@ header {
 }
 @media only screen and (max-width: 890px) {
   #events .event-box {
-    height: 500px;
-    width: 580px;
+    height: 480px;
+    max-width: 580px;
   }
   #events .event-box .event-info {
     padding: 5% 5%;
+  }
+  #events .event-box img {
+    max-width: 100%;
+    object-fit: cover;
   }
 }
 #events .box-exhibitions {
@@ -187,7 +191,7 @@ header {
   object-fit: cover;
   background-color: white;
   border-radius: 20px;
-  font-family: "Apple Chancery", cursive;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
 }
 #events .box-exhibitions .group-exhibition-item img {
   width: 100%;
@@ -206,12 +210,12 @@ header {
 }
 
 #press_carousel #pressControls {
-  width: 700px; /* Set the maximum width of the carousel */
+  max-width: 700px; /* Set the maximum width of the carousel */
   margin: 0 auto; /* Center the carousel */
   margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
   border-radius: 20px;
-  font-family: "Apple Chancery", cursive;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
 }
 #press_carousel #pressControls .carousel-item {
   transition: transform 0.5s ease-in-out;
@@ -219,7 +223,7 @@ header {
   text-align: center;
 }
 #press_carousel #pressControls .carousel-item img {
-  height: 450px; /* Set the height of the images */
+  max-height: 450px; /* Set the height of the images */
   object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
   margin: 5px auto 10px auto;
 }
@@ -233,16 +237,16 @@ header {
 }
 
 #comment_carousel #contentControls {
-  width: 1200px; /* Set the maximum width of the carousel */
+  max-width: 1200px; /* Set the maximum width of the carousel */
   margin: 0 auto; /* Center the carousel */
   margin-bottom: 40px;
   background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
   border-radius: 20px;
-  font-family: "Apple Chancery", cursive;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
 }
 #comment_carousel #contentControls .carousel-item {
   transition: transform 0.5s ease-in-out;
-  height: 320px;
+  min-height: 320px;
   text-align: center;
 }
 #comment_carousel #contentControls .carousel-item #content {
@@ -263,12 +267,34 @@ header {
   left: 90%;
 }
 
-#artist img {
+#artist .container {
+  min-width: 400px;
+}
+#artist .container img {
   border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
 }
 
 #contact {
-  font-family: "Apple Chancery", cursive;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
+}
+
+footer {
+  margin: 50px;
+  font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
+  font-size: 14px;
+}
+footer .footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+footer .footer-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+footer .footer-content a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */

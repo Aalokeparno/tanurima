@@ -153,38 +153,46 @@
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="inputName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" required>
+                            <input type="text" class="form-control" id="inputName" name="inputName" required>
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" required>
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail" required>
                             <label for="inputPhone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="inputPhone">
+                            <input type="number" class="form-control" id="inputPhone" name="inputPhone">
                         </div>
                         <div class="col-sm-5">
                             <label for="inputMessage" class="form-label">Message</label>
-                            <textarea class="form-control" required rows="4" name="Message" id="inputMessage" ></textarea>
+                            <textarea class="form-control" required rows="4" name="inputMessage" id="inputMessage" ></textarea>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="workOffer">
+                                <input type="checkbox" class="form-check-input" id="workOffer" name="workOffer">
                                 <label class="form-check-label" for="workOffer"> Regarding Exhibition/ Workshop</label>
                             </div>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="buyOffer">
+                                <input type="checkbox" class="form-check-input" id="buyOffer" name="buyOffer">
                                 <label class="form-check-label" for="buyOffer"> Regarding buying artworks</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-dark col-sm-auto">Submit</button>
+                        <div class="col-sm-auto">
+                            <button type="submit" class="btn btn-dark">Submit</button>
+                            <p id="success-message" style="display: none; color: green;">Your message has been sent successfully!</p>
+                        </div>
                     </div>
                     <br>
                 
               </form>
         </section>
-        
-
     </main>
+    <footer>
+        <div class="footer-content">
+          <p>Privacy Policy<br>
+          © 2024 aalokeparno.github.io/tanurima. All Rights Reserved</p>
+          <p>Email: <a href="mailto:tanurimadhar@gmail.com">tanurimadhar@gmail.com</a></p>
+          <p>Collected information from the user will only be used for communication purposes and will never be shared with anyone.</p>
+        </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -202,12 +210,16 @@
         window.onload = function() {
             document.getElementById('message-form').addEventListener('submit', function(event) {
                 event.preventDefault();
+                const submitButton = this.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
                 // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
+                emailjs.sendForm('service_cydjotf', 'template_9xkmjki', this)
                     .then(() => {
                         console.log('SUCCESS!');
+                        document.getElementById('success-message').style.display = 'block';
                     }, (error) => {
                         console.log('FAILED...', error);
+                        submitButton.disabled = false; // Re-enable button if sending fails
                     });
             });
         }

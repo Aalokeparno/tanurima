@@ -2,10 +2,10 @@
 //"../images/Abstract/Celebration Of Life 4,Year_2022, Size_ 20_X30_, Medium_ Ink On Paper,.jpg"
 // Custom Styles
 
-$secondary-font: 'Apple Chancery', cursive;
+$secondary-font: 'Apple Chancery','Comic Sans MS', sans-serif;
 
 body {
-    font-family: "Lucida Handwriting", sans-serif;
+    font-family: 'Lucida Handwriting', 'Brush Script MT', cursive;
     background-color: #e9ecef;
 }
 
@@ -196,7 +196,7 @@ header {
         }
         .event-images {
             img {
-                height: 230px;
+                max-height: 230px;
             }
         }
         @media only screen and (max-width: 1200px) {
@@ -210,10 +210,14 @@ header {
             }
         }
         @media only screen and (max-width: 890px) {
-            height: 500px;
-            width: 580px;
+            height: 480px;
+            max-width: 580px;
             .event-info {
                 padding: 5% 5%;
+            }
+            img {
+                max-width: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -258,7 +262,7 @@ header {
 #press_carousel {
 
     #pressControls {
-        width: 700px; /* Set the maximum width of the carousel */
+        max-width: 700px; /* Set the maximum width of the carousel */
         margin: 0 auto; /* Center the carousel */
         margin-bottom: 40px;
         background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
@@ -271,7 +275,7 @@ header {
             text-align: center;
         
             img {
-                height: 450px; /* Set the height of the images */
+                max-height: 450px; /* Set the height of the images */
                 object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
                 margin: 5px auto 10px auto;
             }
@@ -291,7 +295,7 @@ header {
 #comment_carousel {
 
     #contentControls {
-        width: 1200px; /* Set the maximum width of the carousel */
+        max-width: 1200px; /* Set the maximum width of the carousel */
         margin: 0 auto; /* Center the carousel */
         margin-bottom: 40px;
         background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
@@ -300,7 +304,7 @@ header {
 
         .carousel-item {
             transition: transform 0.5s ease-in-out;
-            height: 320px;
+            min-height: 320px;
             text-align: center;
 
             #content {
@@ -326,9 +330,14 @@ header {
 }
 
 #artist {
-    img{
-        border-radius: 20px;
-        }
+    .container{
+        min-width: 400px;
+        img{
+            border-radius: 20px;
+            width: 100%;
+            object-fit: cover;
+            }
+    }
 }
 
 #contact {
@@ -336,5 +345,34 @@ header {
     font-family: $secondary-font;
 }
 
+footer {
+    //background-color: #f8f9fa;
+    //padding: 10px;
+    //text-align: center;
+    margin: 50px;
+    font-family: $secondary-font;
+    font-size: 14px;
+  
+    .footer-content {
+      //max-width: 800px;
+      //margin: 0 auto;
+  
+  
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+  
+      a {
+        color: #007bff;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
 
 
