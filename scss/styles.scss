@@ -259,7 +259,7 @@ header {
 
 #press_carousel {
 
-    #pressControls {
+    .pressControls {
         max-width: 700px; /* Set the maximum width of the carousel */
         margin: 0 auto; /* Center the carousel */
         margin-bottom: 40px;
@@ -285,6 +285,36 @@ header {
             p {
                 font-size: 16px;
                 color: #666;
+            }
+            
+            #name {
+                margin: auto;
+                text-align: bottom;
+                font-size: 18px;
+                color: #666;
+            }
+        }
+    }
+
+    .moreControls {
+        max-width: 700px; /* Set the maximum width of the carousel */
+        margin: 0 auto; /* Center the carousel */
+        margin-bottom: 40px;
+        background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the carousel */
+        border-radius: 20px;
+        font-family: $secondary-font;
+
+        .carousel-item {
+            transition: transform 0.5s ease-in-out;
+            //height: 450px;
+            text-align: center;
+        
+            img {
+                max-height: 350px; /* Set the height of the images */
+                max-width: 80%;
+                object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+                margin: 5px auto 10px auto;
+                filter: grayscale(100%);
             }
         }
     }
@@ -334,6 +364,7 @@ header {
             border-radius: 20px;
             width: 100%;
             object-fit: cover;
+            filter: grayscale(100%);
             }
     }
 }
