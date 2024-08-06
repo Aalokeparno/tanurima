@@ -101,6 +101,11 @@ header .navbar-brand {
   margin-right: auto;
   width: 50%;
 }
+@media only screen and (max-width: 992px) {
+  #about img {
+    width: 80%;
+  }
+}
 #about p {
   font-family: "Apple Chancery", "Comic Sans MS", sans-serif;
   font-size: 1em;
