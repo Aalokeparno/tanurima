@@ -21,6 +21,14 @@ header {
         font-family: Roboto, sans-serif;
         font-size: 1.5em;
     }
+    .navbar-thumbnail {
+        width: 60px; /* Adjust the size as needed */
+        height: 60px; /* Adjust the size as needed */
+        border-radius: 50%;
+        object-fit: cover;
+        margin: auto 10px; /* Adjust the spacing as needed */
+        //border: 5px solid white; /* Add white border */
+    }
 }
 
 .dropdown-menu {

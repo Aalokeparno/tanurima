@@ -16,6 +16,13 @@ header .navbar-brand {
   font-family: Roboto, sans-serif;
   font-size: 1.5em;
 }
+header .navbar-thumbnail {
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto 10px; /* Adjust the spacing as needed */
+}
 
 .dropdown-menu {
   background-color: transparent; /* Remove background color */
